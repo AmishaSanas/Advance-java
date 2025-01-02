@@ -14,7 +14,7 @@ public class AddUser {
 		
 		PreparedStatement ps = c.prepareStatement("insert into user values(?,?,?,?,?,?,?)");
 		
-		int nextpk = UserNextPk.nextPk();
+		int nextpk = UserNextId.nextId();
 
 		System.out.println("next pk: " + nextpk);
 

@@ -1,13 +1,13 @@
-package com.Statement;
+package com.PreparedStatement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class UserNextPk {
+public class UserNextId {
 	
-	public static int nextPk() throws Exception {
+	public static int nextId() throws Exception {
 
 		int id = 0;
 
