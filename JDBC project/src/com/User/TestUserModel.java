@@ -15,7 +15,26 @@ public class TestUserModel {
 		
 		//testDelete();
 		
-		testSearch();
+		//testSearch();
+		
+		testFindByLoginId();
+	}
+	private static void testFindByLoginId() throws Exception {
+		
+		UserModel model = new UserModel();
+
+		UserBean bean = new UserBean();
+		
+		bean = model.findByLoginId("abc123@gmail.com");
+
+		if (bean != null) {
+			
+			System.out.println("login Id already exist..");
+			
+		} else {
+			System.out.println("record not found");
+		}
+		
 	}
 	/*
 	 * private static void testUpdate() throws Exception {

@@ -16,6 +16,8 @@ public class UserBean {
 	
 	private String address;
 	
+	private Date dob;
+	
 	public int getId() {
 		return id;
 	}
@@ -71,10 +73,6 @@ public class UserBean {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-
-	private Date dob;
-	
 	
 }
-	
 	

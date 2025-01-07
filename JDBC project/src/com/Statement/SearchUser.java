@@ -22,12 +22,12 @@ public class SearchUser {
 		// ResultSet rs = s.executeQuery("select * from user where firstName like 'a%'");
 
 		// findeBy id
-		//ResultSet rs = s.executeQuery("select * from user where id = 3");
+		ResultSet rs = s.executeQuery("select * from user where id = 3");
 		
 		//find Subset
 		//ResultSet rs = s.executeQuery("select * from user limit 0,4");
 		
-		ResultSet rs = s.executeQuery("select * from user where firstName like '_a%'");
+		//ResultSet rs = s.executeQuery("select * from user where firstName like '_a%'");
 		
 		
 		while (rs.next()) {

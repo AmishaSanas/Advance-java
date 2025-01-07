@@ -10,8 +10,10 @@ public class AddUser {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		
+		//Creating a connection
 		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root");
 		
+		//create a query using prepared statement object
 		PreparedStatement ps = c.prepareStatement("insert into user values(?,?,?,?,?,?,?)");
 		
 		int nextpk = UserNextId.nextId();

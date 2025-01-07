@@ -40,6 +40,7 @@ public class UserModel {
 		PreparedStatement pstmt = conn.prepareStatement("insert into user values(?,?,?,?,?,?,?)");
 
 		pstmt.setInt(1, nextPK());
+		
 		pstmt.setString(2, bean.getFirstName());
 		pstmt.setString(3, bean.getLastName());
 		pstmt.setString(4, bean.getLoginId());
@@ -121,5 +122,38 @@ public class UserModel {
 		return list;
 
 	}
+	
+	public UserBean findByLoginId(String loginId) throws Exception {
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
 
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root");
+
+		PreparedStatement pstmt = conn.prepareStatement("select * from user where loginId = ?");
+		
+		System.out.println("loginId == " + loginId);
+
+		pstmt.setString(1, loginId);
+
+		ResultSet rs = pstmt.executeQuery();
+
+		UserBean bean = null;
+
+		while (rs.next()) {
+
+			bean = new UserBean();
+			bean.setId(rs.getInt(1));
+			bean.setFirstName(rs.getString(2));
+			bean.setLastName(rs.getString(3));
+			bean.setLoginId(rs.getString(4));
+			bean.setPassword(rs.getString(5));
+			bean.setAddress(rs.getString(6));
+			bean.setDob(rs.getDate(7));
+
+		}
+		
+		return bean;
+		
+	}
+	
 }

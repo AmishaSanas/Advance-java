@@ -15,7 +15,7 @@ public class UserAuthenticate {
 
 		Statement s = conn.createStatement();
 
-		ResultSet rs = s.executeQuery("select * from user where loginId = 'rahu@gmail.com' and password = 'raju1ghghy23'");
+		ResultSet rs = s.executeQuery("select * from user where loginId = 'rahul@gmail.com' and password = 'raju1ghghy23'");
 
 		boolean b = false;
 
