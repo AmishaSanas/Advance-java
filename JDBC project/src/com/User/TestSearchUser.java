@@ -29,6 +29,8 @@ public class TestSearchUser {
 		//bean.setPassword("kabir@123");
 		
 		//bean.setAddress("Kochi, Kerala ");
+		
+		bean.setId(1);
 
 		List list = search.search(bean);
 

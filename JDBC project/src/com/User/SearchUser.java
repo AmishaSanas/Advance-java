@@ -30,13 +30,12 @@ public class SearchUser{
 		
 		if (bean != null) {
 			
-			/*
-			 * if (bean.getId() != null) {
-			 * 
-			 * sb.append(" and id like " + bean.getId() + " ");
-			 * 
-			 * }
-			 */
+			  if (bean.getId() != 0) {
+			 
+			  sb.append(" and id like " + bean.getId() + " ");
+			  
+			 }
+		
 			if (bean.getFirstName() != null && bean.getFirstName().length() > 0) {
 
 				sb.append("and firstName like '" + bean.getFirstName() + "%'");
