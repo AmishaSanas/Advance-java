@@ -27,9 +27,11 @@ public class TestTransaction {
 				
 				System.out.println("data inserted successfully: " + (i + i));
 				
+				// Step 2
 				con.commit();
 				
 			} catch (SQLException e) {
+				//Step 3
 			 con.rollback();
 			 e.printStackTrace();
 			}

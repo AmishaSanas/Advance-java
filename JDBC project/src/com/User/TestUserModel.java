@@ -6,36 +6,38 @@ import java.util.Iterator;
 import java.util.List;
 
 public class TestUserModel {
-	
+
 	public static void main(String[] args) throws Exception {
-		
-	     //testAdd();
-		
-		//testUpdate();
-		
-		//testDelete();
-		
-		//testSearch();
-		
-		testFindByLoginId();
+
+		testAdd();
+
+		// testUpdate();
+
+		// testDelete();
+
+		// testSearch();
+
+		//testFindByLoginId();
 	}
+
 	private static void testFindByLoginId() throws Exception {
-		
+
 		UserModel model = new UserModel();
 
 		UserBean bean = new UserBean();
-		
+
 		bean = model.findByLoginId("abc123@gmail.com");
 
 		if (bean != null) {
-			
+
 			System.out.println("login Id already exist..");
-			
+
 		} else {
 			System.out.println("record not found");
 		}
-		
+
 	}
+
 	/*
 	 * private static void testUpdate() throws Exception {
 	 * 
@@ -53,25 +55,28 @@ public class TestUserModel {
 	 * 
 	 * }
 	 */
-	/*
-	 * private static void testAdd() throws Exception {
-	 * 
-	 * SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-	 * 
-	 * UserModel model = new UserModel();
-	 * 
-	 * UserBean bean = new UserBean();
-	 * 
-	 * bean.setFirstName("abc"); bean.setLastName("abc");
-	 * bean.setLoginId("abc@gmail.com"); bean.setPassword("abc123");
-	 * bean.setAddress("indore"); bean.setDob(sdf.parse("2002-02-02"));
-	 * 
-	 * model.add(bean);
-	 * 
-	 * 
-	 * }
-	 */
-
+	
+//	private static void testAdd() {
+//		// TODO Auto-generated method stub
+//	}
+	  private static void testAdd() throws Exception {
+	  
+	  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	  
+	  UserModel model = new UserModel();
+	  
+	  UserBean bean = new UserBean();
+	  
+	  bean.setFirstName("abc"); 
+	  bean.setLastName("abc");
+	  bean.setLoginId("abc@gmail.com");
+	  bean.setPassword("abc123");
+	  bean.setAddress("indore");
+	  bean.setDob(sdf.parse("2002-02-02"));
+	  
+	  model.add(bean);
+ }
+	 
 	/*
 	 * private static void testDelete() throws Exception {
 	 * 
@@ -83,7 +88,7 @@ public class TestUserModel {
 	 * }
 	 */
 	private static void testSearch() throws Exception {
-		
+
 		UserModel model = new UserModel();
 
 		UserBean bean = new UserBean();
@@ -91,7 +96,7 @@ public class TestUserModel {
 		List list = model.search();
 
 		Iterator it = list.iterator();
-		
+
 		while (it.hasNext()) {
 
 			bean = (UserBean) it.next();

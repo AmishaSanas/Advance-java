@@ -23,12 +23,9 @@ public class TestConnection {
 		
 		System.out.println("Database Connection Successfully......");
 
-	
-		while (rs.next()) {
-			
+		while (rs.next()) {	
 			System.out.print(rs.getInt(1));
 			System.out.println("\t" + rs.getString(2));
-			
 		}
 		
 	}

@@ -2,6 +2,7 @@ package com.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Insert {
@@ -15,7 +16,7 @@ public class Insert {
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance", "root", "root");
 
 		// Step 3 Create Statement
-		Statement stmt = conn.createStatement();
+		Statement stmt = conn.createStatement(); 
 
 		//int i = stmt.executeUpdate("insert into employee values(11, 'Ram', 'Yadav', 'TCS', 65000, 'Ujjain', 2)");
 		

@@ -15,13 +15,13 @@ public class UpdateUser {
 		PreparedStatement ps = conn.prepareStatement(
 				"update user set firstName = ?, lastName = ?, loginId = ?, password = ?, address = ?, dob = ? where id = ?");
 
-		ps.setString(1, "Roshan");
+		ps.setString(1, "Roshani");
 		ps.setString(2, "Sharma");
-		ps.setString(3, "roshan@gmail.com");
-		ps.setString(4, "roshan123");
+		ps.setString(3, "roshani@gmail.com");
+		ps.setString(4, "roshani123");
 		ps.setString(5, "Pune");
 		ps.setDate(6, new java.sql.Date(2003, 11, 02));
-		ps.setInt(7, 15);
+		ps.setInt(7, 11);
 
 		int i = ps.executeUpdate();
 

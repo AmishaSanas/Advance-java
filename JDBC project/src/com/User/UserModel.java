@@ -37,10 +37,11 @@ public class UserModel {
 
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root");
 
+		//Prepare SQL Query
 		PreparedStatement pstmt = conn.prepareStatement("insert into user values(?,?,?,?,?,?,?)");
 
 		pstmt.setInt(1, nextPK());
-		
+		//set the values for the placeholders using data from the UserBean object.
 		pstmt.setString(2, bean.getFirstName());
 		pstmt.setString(3, bean.getLastName());
 		pstmt.setString(4, bean.getLoginId());
