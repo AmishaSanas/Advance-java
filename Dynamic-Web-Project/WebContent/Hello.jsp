@@ -4,14 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>First JSP File</title>
+<title>Java code in HTML</title>
 </head>
 <body>
- <h1>Hello Java Server Page</h1>
-	<h2>Hello JSP</h2>
-	<h3>Hello JSP</h3>
-	<h4>Hello JSP</h4>
-	<h5>Hello JSP</h5>
-	<h6>Hello JSP</h6>
+<%
+		for (int i = 1; i <= 5; i++) {
+	%>
+
+	<h1><%=i%>Hello World...</h1>
+	<%
+		}
+	%>
 </body>
 </html>
