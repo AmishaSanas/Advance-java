@@ -4,11 +4,24 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>View Form</title>
+<title>UserRegistration View</title>
 </head>
 <body>
-     <form action="FirstServlet" method="post">
-		<table>
+<form action="UserRegistrationCtl" method="post">
+
+		<%
+			String msg = (String) request.getAttribute("msg");
+		%>
+
+		<h1 align="center">User Registration</h1>
+		<%
+			if (msg != null) {
+		%>
+		<h1 align="center"><%=msg%></h1>
+		<%
+			}
+		%>
+		<table align="center">
 			<tr>
 				<th>First Name</th>
 				<td><input type="text" name="firstName"
