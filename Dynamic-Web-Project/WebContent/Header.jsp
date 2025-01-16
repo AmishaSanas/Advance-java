@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Creating link</title>
+<title>Header</title>
 </head>
 <body>
- <h1 align="center">
-		<a href="WelcomeCtl">Welcome to my Website</a>
-	</h1>
+    <a href="UserRegistrationCtl">SignUp</a> |
+	<a href="UserListCtl">User List</a>
+	<hr>
 </body>
 </html>

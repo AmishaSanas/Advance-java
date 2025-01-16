@@ -4,11 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Creating link</title>
+<title>online Result</title>
 </head>
 <body>
- <h1 align="center">
-		<a href="WelcomeCtl">Welcome to my Website</a>
-	</h1>
+
+<%@ include file="Header.jsp"%>
+
+	<h1 align="center">Online Result System</h1>
+	
+<%@ include file="Footer.jsp"%>
+    
 </body>
 </html>

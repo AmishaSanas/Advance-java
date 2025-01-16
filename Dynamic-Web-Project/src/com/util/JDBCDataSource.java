@@ -13,7 +13,7 @@ public final class JDBCDataSource {
 
 		private ComboPooledDataSource cpds = null;
 
-		private static ResourceBundle rb = ResourceBundle.getBundle("com.rays.bundle.app");
+		private static ResourceBundle rb = ResourceBundle.getBundle("com.bundle.app");
 
 		// step 3 make constructor private so object can not be created
 		private JDBCDataSource() {
